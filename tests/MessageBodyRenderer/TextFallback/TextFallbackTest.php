@@ -32,6 +32,10 @@ final class TextFallbackTest extends TestCase
             TEXT,
             'case2',
         ];
+        yield [
+            'Hello',
+            'case3',
+        ];
     }
 
     #[DataProvider('dataBase')]
