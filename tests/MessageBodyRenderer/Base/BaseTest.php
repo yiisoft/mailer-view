@@ -14,7 +14,14 @@ final class BaseTest extends TestCase
 {
     public function testBase(): void
     {
-        $renderer = $this->createRenderer();
+        $renderer = new MessageBodyRenderer(
+            new View(),
+            new MessageBodyTemplate(
+                __DIR__ . '/views',
+                'html-layout',
+                'text-layout',
+            ),
+        );
         $viewParameters = ['number' => 42];
         $layoutParameters = ['title' => 'Hello!'];
 
@@ -47,7 +54,14 @@ final class BaseTest extends TestCase
 
     public function testWithoutTextView(): void
     {
-        $renderer = $this->createRenderer();
+        $renderer = new MessageBodyRenderer(
+            new View(),
+            new MessageBodyTemplate(
+                __DIR__ . '/views',
+                'html-layout',
+                'text-layout',
+            ),
+        );
         $viewParameters = ['number' => 42];
         $layoutParameters = ['title' => 'Hello!'];
 
@@ -72,15 +86,18 @@ final class BaseTest extends TestCase
         $this->assertSame($expectedText, $message->getTextBody());
     }
 
-    private function createRenderer(): MessageBodyRenderer
+    public function testRenderTextWithoutTextLayout(): void
     {
-        return new MessageBodyRenderer(
+        $renderer = new MessageBodyRenderer(
             new View(),
-            new MessageBodyTemplate(
-                __DIR__ . '/views',
-                'html-layout',
-                'text-layout',
-            ),
+            new MessageBodyTemplate(__DIR__ . '/views'),
+        );
+
+        $result = $renderer->renderText('text-content', ['number' => 42]);
+
+        $this->assertSame(
+            "\nNumber: 42.",
+            $result,
         );
     }
 }
