@@ -1,15 +1,16 @@
 {
-    "name": "yiisoft/_____",
+    "name": "yiisoft/mailer-view",
     "type": "library",
-    "description": "_____",
+    "description": "Yii Mailer message body rendering extension",
     "keywords": [
-        "_____"
+        "mailer",
+        "view"
     ],
     "homepage": "https://www.yiiframework.com/",
     "license": "BSD-3-Clause",
     "support": {
-        "issues": "https://github.com/yiisoft/_____/issues?state=open",
-        "source": "https://github.com/yiisoft/_____",
+        "issues": "https://github.com/yiisoft/mailer-view/issues?state=open",
+        "source": "https://github.com/yiisoft/mailer-view",
         "forum": "https://www.yiiframework.com/forum/",
         "wiki": "https://www.yiiframework.com/wiki/",
         "irc": "ircs://irc.libera.chat:6697/yii",
@@ -40,12 +41,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Yiisoft\\_____\\": "src"
+            "Yiisoft\\Mailer\\View\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Yiisoft\\_____\\Tests\\": "tests"
+            "Yiisoft\\Mailer\\View\\Tests\\": "tests"
         }
     },
     "config": {
