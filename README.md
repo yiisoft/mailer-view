@@ -2,18 +2,18 @@
     <a href="https://github.com/yiisoft" target="_blank">
         <img src="https://yiisoft.github.io/docs/images/yii_logo.svg" height="100px" alt="Yii">
     </a>
-    <h1 align="center">Yii _____</h1>
+    <h1 align="center">Yii Mailer View</h1>
     <br>
 </p>
 
-[![Latest Stable Version](https://poser.pugx.org/yiisoft/_____/v)](https://packagist.org/packages/yiisoft/_____)
-[![Total Downloads](https://poser.pugx.org/yiisoft/_____/downloads)](https://packagist.org/packages/yiisoft/_____)
-[![Build status](https://github.com/yiisoft/_____/actions/workflows/build.yml/badge.svg)](https://github.com/yiisoft/_____/actions/workflows/build.yml)
-[![Code Coverage](https://codecov.io/gh/yiisoft/_____/branch/master/graph/badge.svg)](https://codecov.io/gh/yiisoft/_____)
-[![Mutation testing badge](https://img.shields.io/endpoint?style=flat&url=https%3A%2F%2Fbadge-api.stryker-mutator.io%2Fgithub.com%2Fyiisoft%2F_____%2Fmaster)](https://dashboard.stryker-mutator.io/reports/github.com/yiisoft/_____/master)
-[![static analysis](https://github.com/yiisoft/_____/workflows/static%20analysis/badge.svg)](https://github.com/yiisoft/_____/actions?query=workflow%3A%22static+analysis%22)
-[![type-coverage](https://shepherd.dev/github/yiisoft/_____/coverage.svg)](https://shepherd.dev/github/yiisoft/_____)
-[![psalm-level](https://shepherd.dev/github/yiisoft/_____/level.svg)](https://shepherd.dev/github/yiisoft/_____)
+[![Latest Stable Version](https://poser.pugx.org/yiisoft/mailer-view/v)](https://packagist.org/packages/yiisoft/mailer-view)
+[![Total Downloads](https://poser.pugx.org/yiisoft/mailer-view/downloads)](https://packagist.org/packages/yiisoft/mailer-view)
+[![Build status](https://github.com/yiisoft/mailer-view/actions/workflows/build.yml/badge.svg)](https://github.com/yiisoft/mailer-view/actions/workflows/build.yml)
+[![Code Coverage](https://codecov.io/gh/yiisoft/mailer-view/branch/master/graph/badge.svg)](https://codecov.io/gh/yiisoft/mailer-view)
+[![Mutation testing badge](https://img.shields.io/endpoint?style=flat&url=https%3A%2F%2Fbadge-api.stryker-mutator.io%2Fgithub.com%2Fyiisoft%2Fmailer-view%2Fmaster)](https://dashboard.stryker-mutator.io/reports/github.com/yiisoft/mailer-view/master)
+[![static analysis](https://github.com/yiisoft/mailer-view/workflows/static%20analysis/badge.svg)](https://github.com/yiisoft/mailer-view/actions?query=workflow%3A%22static+analysis%22)
+[![type-coverage](https://shepherd.dev/github/yiisoft/mailer-view/coverage.svg)](https://shepherd.dev/github/yiisoft/mailer-view)
+[![psalm-level](https://shepherd.dev/github/yiisoft/mailer-view/level.svg)](https://shepherd.dev/github/yiisoft/mailer-view)
 
 The package ...
 
@@ -26,7 +26,7 @@ The package ...
 The package could be installed with [Composer](https://getcomposer.org):
 
 ```shell
-composer require yiisoft/_____
+composer require yiisoft/mailer-view
 ```
 
 ## General usage
@@ -40,7 +40,7 @@ for that. You may also check out other [Yii Community Resources](https://www.yii
 
 ## License
 
-The Yii _____ is free software. It is released under the terms of the BSD License.
+The Yii Mailer View is free software. It is released under the terms of the BSD License.
 Please see [`LICENSE`](./LICENSE.md) for more information.
 
 Maintained by [Yii Software](https://www.yiiframework.com/).
