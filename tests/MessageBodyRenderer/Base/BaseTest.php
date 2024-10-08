@@ -28,9 +28,9 @@ final class BaseTest extends TestCase
         $message = $renderer->addBodyToMessage(
             new Message(),
             'html-content',
-            'text-content',
             $viewParameters,
             $layoutParameters,
+            'text-content',
         );
         $htmlBody = $renderer->renderHtml('html-content', $viewParameters, $layoutParameters);
         $textBody = $renderer->renderText('text-content', $viewParameters, $layoutParameters);
@@ -68,7 +68,6 @@ final class BaseTest extends TestCase
         $message = $renderer->addBodyToMessage(
             new Message(),
             'html-content',
-            null,
             $viewParameters,
             $layoutParameters,
         );
