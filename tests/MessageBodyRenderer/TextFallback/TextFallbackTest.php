@@ -24,7 +24,7 @@ final class TextFallbackTest extends TestCase
         yield [
             <<<TEXT
             First paragraph
-            second line
+            second line: 'hello', "world"
 
             http://yiifresh.com/index.php?r=site%2Freset-password&token=abcdef
 

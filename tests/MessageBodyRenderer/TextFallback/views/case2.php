@@ -2,7 +2,7 @@
 <body>
 <style type="text/css">.content{color: #112345;}</style>
 <p> First paragraph
-    second line
+    second line: &#039;hello&#039;, &quot;world&quot;
 
     <a href="http://yiifresh.com/index.php?r=site%2Freset-password&amp;token=abcdef">http://yiifresh.com/index.php?r=site%2Freset-password&amp;token=abcdef</a>
 
