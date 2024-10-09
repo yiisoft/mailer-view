@@ -11,10 +11,16 @@ use Yiisoft\Mailer\SendResults;
 use Yiisoft\View\Exception\ViewNotFoundException;
 
 /**
+ * Mailer decorator with extra method `compose()` for composing message body via view rendering.
+ *
  * @api
  */
 final class ViewMailer implements MailerInterface
 {
+    /**
+     * @param MailerInterface $mailer The mailer.
+     * @param MessageBodyRenderer $messageBodyRenderer View renderer for compose message body.
+     */
     public function __construct(
         private readonly MailerInterface $mailer,
         private MessageBodyRenderer $messageBodyRenderer,
