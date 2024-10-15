@@ -21,7 +21,7 @@ final class MessageBodyRenderer
      */
     public function __construct(
         private View $view,
-        private MessageBodyTemplate $template
+        private MessageBodyTemplate $template,
     ) {
     }
 
