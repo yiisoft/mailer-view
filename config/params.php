@@ -7,5 +7,5 @@ return [
         'viewPath' => '@resources/mail',
         'htmlLayout' => null,
         'textLayout' => null,
-    ]
+    ],
 ];
