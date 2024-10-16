@@ -7,15 +7,11 @@ namespace Yiisoft\Mailer\View\Tests\ConfigTest\MessageBodyRenderer;
 use Yiisoft\Aliases\Aliases;
 use Yiisoft\Di\Container;
 use Yiisoft\Di\ContainerConfig;
-use Yiisoft\Mailer\MailerInterface;
-use Yiisoft\Mailer\StubMailer;
 use Yiisoft\Mailer\View\MessageBodyRenderer;
 use Yiisoft\Mailer\View\Tests\ConfigTest\ConfigTestCase;
-use Yiisoft\Mailer\View\ViewMailer;
 
 final class MessageBodyRendererConfigTest extends ConfigTestCase
 {
-
     public function testBase(): void
     {
         $container = new Container(

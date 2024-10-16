@@ -19,7 +19,7 @@ final class WithViewTest extends TestCase
         );
 
         $renderer = $baseRenderer->withView(
-            (new View)->withFallbackExtension('txt')
+            (new View())->withFallbackExtension('txt')
         );
 
         $baseContent = $baseRenderer->renderText('content');
