@@ -15,7 +15,11 @@
 [![type-coverage](https://shepherd.dev/github/yiisoft/mailer-view/coverage.svg)](https://shepherd.dev/github/yiisoft/mailer-view)
 [![psalm-level](https://shepherd.dev/github/yiisoft/mailer-view/level.svg)](https://shepherd.dev/github/yiisoft/mailer-view)
 
-The package ...
+This [Yii Mailer](https://github.com/yiisoft/mailer) extension provides classes for composing message body via view
+rendering:
+
+- `MessageBodyRenderer` - a view renderer used to compose message body.
+- `ViewMailer` - a mailer decorator with `compose()` method.
 
 ## Requirements
 
@@ -30,6 +34,69 @@ composer require yiisoft/mailer-view
 ```
 
 ## General usage
+
+### Message body renderer
+
+```php
+use Yiisoft\Mailer\View\MessageBodyRenderer;
+use Yiisoft\Mailer\View\MessageBodyTemplate;
+use Yiisoft\View\View;
+
+$renderer = new MessageBodyRenderer(
+    new View(),
+    new MessageBodyTemplate(
+        __DIR__ . '/views',
+        'html-layout',
+    ),
+);
+
+// HTML body
+$htmlBody = $renderer->renderHtml(
+    view: 'html-content',
+    viewParameters: ['count' => 42],
+    layoutParameters: ['header' => 'Hello!'],
+);
+
+// Text body
+$textBody = $renderer->renderText(
+    view: 'html-content',
+    viewParameters: ['count' => 42],
+    layoutParameters: ['header' => 'Hello!'],
+);
+
+// Add body to message
+$message = $renderer->addBodyToMessage(
+    message: new Message(),
+    htmlView: 'html-content',
+    viewParameters: ['count' => 42],
+    layoutParameters: ['header' => 'Hello!'],
+);
+```
+
+When you use `addBodyToMessage()` method, text body will be generated from the HTML body. If needed, you can pass `textView` parameter with the name of the text view.
+
+### Mailer decorator
+
+```php
+/**
+ * @var \Yiisoft\Mailer\MailerInterface $mailer
+ * @var Yiisoft\Mailer\View\MessageBodyRenderer $messageBodyRenderer
+ */
+ 
+$viewMailer = new ViewMailer($mailer, $messageBodyRenderer);
+
+// Create message
+$message = $viewMailer->compose(
+    htmlView: 'html-content',
+    viewParameters: ['count' => 42],
+    layoutParameters: ['header' => 'Hello!'],
+);
+
+// Send message
+$viewMailer->send($message);
+```
+
+When you use `compose()` method, text body will be generated from the HTML body. If needed, you can pass `textView` parameter with the name of the text view.
 
 ## Documentation
 
