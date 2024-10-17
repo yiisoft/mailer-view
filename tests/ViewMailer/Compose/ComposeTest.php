@@ -32,13 +32,7 @@ final class ComposeTest extends TestCase
             HTML,
             $message->getHtmlBody()
         );
-        $this->assertSame(
-            <<<TEXT
-            Hello!
-            Number: 42.
-            TEXT,
-            $message->getTextBody()
-        );
+        $this->assertNull($message->getTextBody());
     }
 
     public function testWithoutHtmlView(): void
