@@ -76,13 +76,9 @@ final class BaseTest extends TestCase
             <h1>Hello!</h1>
             <p>Number: 42.</p>
             HTML;
-        $expectedText = <<<TEXT
-            Hello!
-            Number: 42.
-            TEXT;
 
         $this->assertSame($expectedHtml, $message->getHtmlBody());
-        $this->assertSame($expectedText, $message->getTextBody());
+        $this->assertNull($message->getTextBody());
     }
 
     public function testRenderTextWithoutTextLayout(): void

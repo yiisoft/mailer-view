@@ -73,7 +73,7 @@ $message = $renderer->addBodyToMessage(
 );
 ```
 
-When you use `addBodyToMessage()` method, text body will be generated from the HTML body. If needed, you can pass `textView` parameter with the name of the text view.
+If needed, you can pass `textView` parameter with the name of the text view.
 
 ### Mailer decorator
 
@@ -96,7 +96,7 @@ $message = $viewMailer->compose(
 $viewMailer->send($message);
 ```
 
-When you use `compose()` method, text body will be generated from the HTML body. If needed, you can pass `textView` parameter with the name of the text view.
+If needed, you can pass `textView` parameter with the name of the text view.
 
 ## Documentation
 
